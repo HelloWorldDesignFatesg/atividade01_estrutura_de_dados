@@ -1,0 +1,15 @@
+service\Sistema.class
+model\Palavras.class
+service\IGerenciadorPesquisa.class
+service\ILeitorArquivo.class
+model\ListaOrdenada.class
+service\GerenciadorPesquisa.class
+model\BuscaBinaria.class
+service\LeitorArquivo.class
+module-info.class
+application\HomeController.class
+model\IAnalisadorDesempenho.class
+model\No.class
+application\App.class
+model\AnalisadorDesempenho.class
+model\IEstruturaDeDados.class
