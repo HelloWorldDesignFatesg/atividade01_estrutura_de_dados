@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package model;
 
 import java.util.List;
@@ -36,13 +33,6 @@ public class AnalisadorDesempenho implements IAnalisadorDesempenho {
 
         long fim = System.nanoTime();
         tempoGasto = fim - inicio;
-    }
-    
-    @Override
-    public void limparDados(){
-        tempoGasto = 0;
-        comparacoes = 0;
-        atribuicoes = 0;
     }
 
     @Override

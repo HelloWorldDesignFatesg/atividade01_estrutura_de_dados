@@ -12,7 +12,6 @@ import java.util.List;
  */
 public interface IAnalisadorDesempenho {
     public void medirTempo(IEstruturaDeDados estrutura, List<Palavras> palavras);
-    public void limparDados();
     public void incrementarComparacoes();
     public void incrementarAtribuicoes();
     public long getTempoGasto();

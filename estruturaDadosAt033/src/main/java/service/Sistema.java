@@ -1,24 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package service;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import model.AnalisadorDesempenho;
-import model.Arvore;
-import model.BuscaBinaria;
 import model.IAnalisadorDesempenho;
 import model.IEstruturaDeDados;
-import model.ListaOrdenada;
 import model.Palavras;
+import model.BuscaBinaria;
+import model.ListaOrdenada;
+import model.Arvore;
 
-/**
- *
- * @author Spindola
- */
 public class Sistema {
     private List<IEstruturaDeDados> minhasEstruturas;
     private List<Palavras> palavrasLimpas;
@@ -31,6 +23,7 @@ public class Sistema {
         IEstruturaDeDados listaOrdenada = new ListaOrdenada("Lista Ordenada");
         IEstruturaDeDados arvoreBinaria = new Arvore("Árvore Binária");
         
+        
         this.minhasEstruturas.add(buscaBinaria);
         this.minhasEstruturas.add(listaOrdenada);
         this.minhasEstruturas.add(arvoreBinaria);
@@ -42,9 +35,9 @@ public class Sistema {
         if (palavrasLimpas != null && !palavrasLimpas.isEmpty()) {
             for (IEstruturaDeDados estrutura : minhasEstruturas) {
                 
-                desempenhoEstrutura.limparDados();
                 desempenhoEstrutura.medirTempo(estrutura, palavrasLimpas);
-                
+
+               
                 DecimalFormat df = new DecimalFormat("#0.00");
                 resultados += estrutura.NomeEstrutra() +
                         "\n--- --- --- --- ---" +
@@ -52,7 +45,7 @@ public class Sistema {
                         "\nComparações: " + desempenhoEstrutura.getComparacoes() +
                         "\nAtribuições: " + desempenhoEstrutura.getAtribuicoes() +
                         "\n--- --- --- --- ---\n";
-            }      
+            }
         } else {
             System.out.println("A lista de palavras está vazia ou nula.");
         }
@@ -73,5 +66,4 @@ public class Sistema {
     public void setPalavrasLimpas(List<Palavras> palavrasLimpas) {
         this.palavrasLimpas = palavrasLimpas;
     }
-    
 }

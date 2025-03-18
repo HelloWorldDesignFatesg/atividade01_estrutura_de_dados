@@ -30,7 +30,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         try{
             scene = new Scene(loadFXML("home"));
-            stage.setTitle("TXT.Flow");
+            stage.setTitle("Nome_App");
             stage.setScene(scene);
             stage.setResizable(false);
             stage.show();   

@@ -80,7 +80,7 @@ public class GerenciadorPesquisa implements IGerenciadorPesquisa {
 
     private void processarTexto(String texto) {
         quantidadeDeCaracteresOriginal = texto.length();
-        String textoSemPontuacao = texto.replaceAll("[^a-zA-Z0-9À-ÿ ]", " ");
+        String textoSemPontuacao = texto.replaceAll("[,.;:!?\"']", " ");
 
         String[] palavras = textoSemPontuacao.split("\\s+");
 

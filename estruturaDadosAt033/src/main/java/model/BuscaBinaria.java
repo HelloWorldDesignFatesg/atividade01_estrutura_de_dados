@@ -14,6 +14,7 @@ import java.util.List;
 public class BuscaBinaria implements IEstruturaDeDados {
     private List<Palavras> vetor;
     private String nome;
+    
     public BuscaBinaria(String nome) {
         this.vetor = new ArrayList<>();
         this.nome = nome;
@@ -33,6 +34,7 @@ public class BuscaBinaria implements IEstruturaDeDados {
             if (p.getTexto().equals(palavra.getTexto())) {
                 // Se a palavra já existe, não insira e apenas incremente a frequência
                 p.incrementarFrequencia(); // Incrementa a frequência da palavra existente
+                desempenho.incrementarAtribuicoes(); // Conta a atribuição
                 return; // Sai do método, pois não é necessário inserir novamente
             }
         }
