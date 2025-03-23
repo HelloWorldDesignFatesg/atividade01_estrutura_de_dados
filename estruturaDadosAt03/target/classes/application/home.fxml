@@ -25,7 +25,7 @@
             <Image url="@../image/backgroud_soft.jpg" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" prefHeight="55.0" prefWidth="800.0" text="TXT.Flow" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="0.0">
+      <Label alignment="CENTER" prefHeight="55.0" prefWidth="800.0" text="TXT.Flow" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="0.0">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -143,7 +143,7 @@
                               <Label alignment="CENTER" prefHeight="25.0" prefWidth="700.0" text="Bem-vindo ao LPO Software! Nossa missão é desenvolver soluções inteligentes para facilitar o dia a dia de nossos usuários." />
                               <Pane prefHeight="40.0" prefWidth="200.0" />
                               <Label alignment="CENTER" prefHeight="25.0" prefWidth="700.0" text="Nome do software: XXX" />
-                              <Label alignment="CENTER" prefHeight="25.0" prefWidth="700.0" text="Versão: 1.0.1" />
+                              <Label alignment="CENTER" prefHeight="25.0" prefWidth="700.0" text="Versão: 1.0.3" />
                               <Label alignment="CENTER" prefHeight="25.0" prefWidth="700.0" text="Desenvolvedores:" />
                               <Label alignment="CENTER" prefHeight="25.0" prefWidth="700.0" text="- Luís Fernando de Oliveira Siqueira" />
                               <Label alignment="CENTER" prefHeight="25.0" prefWidth="700.0" text="- Ozéias Campos de Souza" />
@@ -180,5 +180,10 @@
             </ImageView>
          </graphic>
       </Button>
+      <ImageView fitHeight="55.0" fitWidth="100.0" layoutX="690.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="545.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
+         <image>
+            <Image url="@../image/logo.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

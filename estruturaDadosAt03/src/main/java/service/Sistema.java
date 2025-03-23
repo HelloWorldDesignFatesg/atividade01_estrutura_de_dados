@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import model.AnalisadorDesempenho;
 import model.Arvore;
+import model.ArvoreAVL;
 import model.BuscaBinaria;
 import model.IAnalisadorDesempenho;
 import model.IEstruturaDeDados;
@@ -30,10 +31,12 @@ public class Sistema {
         IEstruturaDeDados buscaBinaria = new BuscaBinaria("Busca Binaria");
         IEstruturaDeDados listaOrdenada = new ListaOrdenada("Lista Ordenada");
         IEstruturaDeDados arvoreBinaria = new Arvore("Árvore Binária");
+        IEstruturaDeDados arvoreAVL = new ArvoreAVL("Árvore AVL");
         
         this.minhasEstruturas.add(buscaBinaria);
         this.minhasEstruturas.add(listaOrdenada);
         this.minhasEstruturas.add(arvoreBinaria);
+        this.minhasEstruturas.add(arvoreAVL);
     }
     
     public void IniciarMedidorDeDesempenho() {

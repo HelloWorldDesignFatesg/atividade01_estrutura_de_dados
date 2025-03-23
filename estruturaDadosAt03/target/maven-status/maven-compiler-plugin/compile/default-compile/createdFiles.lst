@@ -2,6 +2,7 @@ service\Sistema.class
 model\Palavras.class
 service\IGerenciadorPesquisa.class
 service\ILeitorArquivo.class
+model\ArvoreAVL.class
 model\Arvore.class
 model\ListaOrdenada.class
 service\GerenciadorPesquisa.class

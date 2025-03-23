@@ -5,18 +5,14 @@ public class No {
     private Palavras dado;
     private No esquerda;
     private No direita;
+    private int altura;
     
     public No() {
     }
     
-    // Construtor que recebe um objeto Palavras diretamente
     public No(Palavras dado) {
         this.dado = dado;
-    }
-    
-    // Construtor alternativo: se você quiser continuar recebendo apenas a String
-    public No(String texto) {
-        this.dado = new Palavras(texto);
+        this.altura = 1;
     }
     
     public Palavras getDado() {
@@ -41,6 +37,14 @@ public class No {
     
     public void setDireita(No direita) {
         this.direita = direita;
+    }
+
+    public int getAltura() {
+        return altura;
+    }
+
+    public void setAltura(int altura) {
+        this.altura = altura;
     }
     
     @Override
