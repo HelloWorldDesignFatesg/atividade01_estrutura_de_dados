@@ -1,5 +1,7 @@
 package application;
 
+import javafx.scene.control.ScrollPane;
+import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -9,6 +11,7 @@ import model.No;
 
 public class ArvoreBinariaVisualizer {
     private Pane pane;
+    private ScrollPane scrollPane; // ScrollPane que conterá o pane
 
     /**
      * Construtor que recebe a raiz da árvore binária e as dimensões do painel.
@@ -17,10 +20,29 @@ public class ArvoreBinariaVisualizer {
      * @param height Altura do painel de visualização.
      */
     public ArvoreBinariaVisualizer(No raiz, double width, double height) {
+        // Define um pane com dimensões maiores para possibilitar a rolagem
         pane = new Pane();
-        pane.setPrefSize(width, height);
+        pane.setPrefSize(width * 2, height * 2);
         // Inicia o desenho com a raiz centralizada horizontalmente, com margem superior
         desenharNo(raiz, width / 2, 50, width / 4);
+
+        // Cria o ScrollPane que envolve o pane e configura suas propriedades
+        scrollPane = new ScrollPane(pane);
+        scrollPane.setPrefSize(width, height);
+        scrollPane.setPannable(true);  // Permite arrastar o conteúdo com o mouse
+        // As barras laterais serão exibidas automaticamente se o conteúdo for maior que o viewport
+
+        // Adiciona zoom utilizando a roda do mouse enquanto a tecla Ctrl estiver pressionada
+        pane.addEventFilter(ScrollEvent.SCROLL, event -> {
+            if (event.isControlDown()) {
+                double delta = event.getDeltaY();
+                double scale = pane.getScaleX(); // Assume escala uniforme para X e Y
+                double factor = (delta > 0) ? 1.1 : 0.9;
+                pane.setScaleX(scale * factor);
+                pane.setScaleY(scale * factor);
+                event.consume();
+            }
+        });
     }
 
     /**
@@ -61,7 +83,11 @@ public class ArvoreBinariaVisualizer {
         pane.getChildren().add(texto);
     }
     
-    public Pane getPane() {
-        return pane;
+    /**
+     * Retorna o ScrollPane que contém o conteúdo com zoom e barras de rolagem.
+     * @return o ScrollPane configurado.
+     */
+    public ScrollPane getPane() {
+        return scrollPane;
     }
 }

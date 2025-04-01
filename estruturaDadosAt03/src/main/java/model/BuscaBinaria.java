@@ -42,7 +42,10 @@ public class BuscaBinaria implements IEstruturaDeDados {
 
         // Verificar se a palavra já existe antes de inserir
         for (Palavras p : vetor) {
-            if (p.getTexto().equals(palavra.getTexto())) {
+            
+            desempenho.incrementarComparacoes(); // Conta cada comparação
+            
+             if (p.getTexto().equals(palavra.getTexto())) {
                 // Se a palavra já existe, não insira e apenas incremente a frequência
                 p.incrementarFrequencia(); // Incrementa a frequência da palavra existente
                 return; // Sai do método, pois não é necessário inserir novamente
@@ -57,7 +60,7 @@ public class BuscaBinaria implements IEstruturaDeDados {
             while (inicio <= fim) {
                 int meio = (inicio + fim) / 2;
                 String textoAtual = vetor.get(meio).getTexto();
-                desempenho.incrementarComparacoes(); // Conta cada comparação
+                //desempenho.incrementarComparacoes(); // Conta cada comparação
                 int comparacao = textoAtual.compareTo(palavra.getTexto());
 
                 if (comparacao < 0) {

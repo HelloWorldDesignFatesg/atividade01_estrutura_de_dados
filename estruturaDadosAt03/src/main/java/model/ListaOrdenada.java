@@ -40,7 +40,9 @@ public class ListaOrdenada implements IEstruturaDeDados {
         // Encontrar a posição correta para inserção (ordem alfabética)
         for (int i = 0; i < lista.size(); i++) {
             desempenho.incrementarComparacoes(); // Conta cada comparação
+            
             String textoAtual = lista.get(i).getTexto();
+            
             int comparacao = textoAtual.compareTo(palavra.getTexto());
 
             if (comparacao == 0) {
@@ -63,6 +65,8 @@ public class ListaOrdenada implements IEstruturaDeDados {
     public Palavras buscar(String palavra) {
         // Busca linear (poderia ser binária, mas mantive simples para lista)
         for (Palavras p : lista) {
+            
+            
             if (p.getTexto().equals(palavra)) {
                 return p; // Retorna o objeto Palavras encontrado
             }

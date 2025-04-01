@@ -29,6 +29,7 @@ import service.LeitorArquivo;
 import service.Sistema;
 import application.ArvoreAVLVisualizer;
 import application.ArvoreBinariaVisualizer;
+import javafx.scene.control.ScrollPane;
 
 public class HomeController implements Initializable {
 
@@ -141,7 +142,7 @@ public class HomeController implements Initializable {
         if (arvoreAVL != null && arvoreAVL instanceof ArvoreAVL) {
             No raiz = ((ArvoreAVL) arvoreAVL).getRaiz();
             ArvoreAVLVisualizer visualizador = new ArvoreAVLVisualizer(raiz, 1280, 800);
-            Pane paneVisualizacao = visualizador.getPane();
+            ScrollPane paneVisualizacao = visualizador.getPane();
             
             Stage stage = new Stage();
             Scene scene = new Scene(paneVisualizacao, 1280, 800);
@@ -159,7 +160,7 @@ public class HomeController implements Initializable {
             No raiz = ((Arvore) arvoreBinaria).getRaiz();
             if (raiz != null) {
                 ArvoreBinariaVisualizer visualizador = new ArvoreBinariaVisualizer(raiz, 1280, 800);
-                Pane paneVisualizacao = visualizador.getPane();
+                ScrollPane paneVisualizacao = visualizador.getPane();
                 
                 Stage stage = new Stage();
                 Scene scene = new Scene(paneVisualizacao, 1280, 800);

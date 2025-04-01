@@ -68,13 +68,6 @@
                                         <Font name="System Bold" size="10.0" />
                                     </font>
                                 </Label>
-                        
-                                <!-- Título -->
-                                <Label alignment="CENTER" layoutX="249.0" layoutY="-18.0" prefHeight="55.0" prefWidth="1000.0" text="TXT.Flow" AnchorPane.leftAnchor="249.0" AnchorPane.rightAnchor="-49.0" AnchorPane.topAnchor="-18.0">
-                                    <font>
-                                        <Font name="System Bold" size="18.0" />
-                                    </font>
-                                </Label>
                             </children>
                         </AnchorPane>
                   
